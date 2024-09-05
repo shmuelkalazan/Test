@@ -1,160 +1,357 @@
-let x = null
-let y = undefined
-x = `"sdfghj \n${"hjkjhg"}`
-if (x === y)
-{alert("yehhh")}
-console.log(x);
-const person = {
-   name : "",
-   id  : 0,
-   year : 0,
-   isEnrolled :false
-}
+let militaryUnit = {
 
-const { object } = require("zod");
+  name: "1st Infantry Division",
 
-// let students = []
+  location: "Fort Bragg, North Carolina, USA",
 
-function createStudent(id,name,year,isEnrolled){
-    let newStudent = Object.create(person);
-    newStudent.id = id;
-    newStudent.name = name;
-    newStudent.year = year;
-    newStudent.isEnrolled = isEnrolled;
-    return newStudent;
-}
+  establishmentDate: "1941-06-01",
 
-function push(person){
-    students[students.length +1] = person
-}
+  unitType: "Infantry Division",
 
-let studet1 = createStudent(1,"shmuel",5,true)
-push(studet1)
-console.log(students);
+  commandStructure: {
 
-const students = [
+    commandingOfficer: {
+
+      rank: "Major General",
+
+      name: "John Doe",
+
+      contact: {
+
+        email: "john.doe@example.com",
+
+        phone: "+1-555-123-4567",
+
+      },
+
+    },
+
+    executiveOfficer: {
+
+      rank: "Colonel",
+
+      name: "Jane Smith",
+
+      contact: {
+
+        email: "jane.smith@example.com",
+
+        phone: "+1-555-987-6543",
+
+      },
+
+    },
+
+    chiefOfStaff: {
+
+      rank: "Brigadier General",
+
+      name: "Robert Brown",
+
+      contact: {
+
+        email: "robert.brown@example.com",
+
+        phone: "+1-555-555-1234",
+
+      },
+
+    },
+
+  },
+
+  personnel: [
+
     {
+
       id: 1,
-      fullName: "Moshe Goldberg",
-      age: 20,
-      degree: "Computer Science",
-      grades: [85, 92, 78, 95, 88],
-      isPaid: true,
-      enrollmentDate: new Date("2021-09-01")
+
+      name: "Private First Class Alice Johnson",
+
+      rank: "Private First Class",
+
+      role: "Rifleman",
+
+      contact: {
+
+        email: "alice.johnson@example.com",
+
+        phone: "+1-555-000-1111",
+
+      },
+
     },
+
     {
+
       id: 2,
-      fullName: "Rachel Shapiro",
-      age: 22,
-      degree: "Biology",
-      grades: [76, 88, 92, 79, 85],
-      isPaid: false,
-      enrollmentDate: new Date("2020-09-01")
+
+      name: "Sergeant Michael White",
+
+      rank: "Sergeant",
+
+      role: "Squad Leader",
+
+      contact: {
+
+        email: "michael.white@example.com",
+
+        phone: "+1-555-000-2222",
+
+      },
+
     },
+
+  ],
+
+  equipment: {
+
+    vehicles: [
+
+      {
+
+        type: "M1 Abrams Tank",
+
+        quantity: 20,
+
+        status: "Operational",
+
+      },
+
+      {
+
+        type: "Humvee",
+
+        quantity: 50,
+
+        status: "Operational",
+
+      },
+
+    ],
+
+    firearms: [
+
+      {
+
+        type: "M16 Rifle",
+
+        quantity: 500,
+
+        status: "Operational",
+
+      },
+
+      {
+
+        type: "M249 SAW",
+
+        quantity: 100,
+
+        status: "Operational",
+
+      },
+
+    ],
+
+    otherEquipment: [
+
+      {
+
+        type: "Night Vision Goggles",
+
+        quantity: 150,
+
+        status: "Operational",
+
+      },
+
+      {
+
+        type: "Field Radios",
+
+        quantity: 100,
+
+        status: "Operational",
+
+      },
+
+    ],
+
+  },
+
+  missions: [
+
     {
-      id: 3,
-      fullName: "Avi Cohen",
-      age: 21,
-      degree: "Psychology",
-      grades: [90, 85, 88, 92, 79],
-      isPaid: true,
-      enrollmentDate: new Date("2021-01-15")
+
+      missionName: "Operation Desert Storm",
+
+      startDate: "1991-01-17",
+
+      endDate: "1991-02-28",
+
+      description: "Combat operation to liberate Kuwait from Iraqi occupation.",
+
     },
+
     {
-      id: 4,
-      fullName: "Sarah Levy",
-      age: 19,
-      degree: "Engineering",
-      grades: [95, 88, 92, 97, 91],
-      isPaid: true,
-      enrollmentDate: new Date("2022-09-01")
+
+      missionName: "Operation Enduring Freedom",
+
+      startDate: "2001-10-07",
+
+      endDate: "2014-12-28",
+
+      description:
+
+        "Military operations aimed at dismantling al-Qaeda and removing the Taliban from power in Afghanistan.",
+
     },
+
+  ],
+
+  trainingPrograms: [
+
     {
-      id: 5,
-      fullName: "David Friedman",
-      age: 23,
-      degree: "Business Administration",
-      grades: [82, 78, 85, 80, 88],
-      isPaid: false,
-      enrollmentDate: new Date("2019-09-01")
+
+      programName: "Basic Combat Training",
+
+      duration: 10,
+
+      focus:
+
+        "Fundamentals of soldiering, physical conditioning, and basic combat skills.",
+
     },
+
     {
-      id: 6,
-      fullName: "Esther Rosenbaum",
-      age: 20,
-      degree: "Nursing",
-      grades: [88, 92, 85, 90, 87],
-      isPaid: true,
-      enrollmentDate: new Date("2021-09-01")
+
+      programName: "Advanced Individual Training",
+
+      duration: 12,
+
+      focus:
+
+        "Specialized training for specific military occupational specialties.",
+
     },
+
+  ],
+
+  history: [
+
     {
-      id: 7,
-      fullName: "Yakov Stern",
-      age: 22,
-      degree: "Physics",
-      grades: [91, 95, 88, 93, 89],
-      isPaid: true,
-      enrollmentDate: new Date("2020-09-01")
+
+      eventDate: "1941-06-01",
+
+      eventDescription: "Establishment of the 1st Infantry Division.",
+
     },
+
     {
-      id: 8,
-      fullName: "Miriam Katz",
-      age: 21,
-      degree: "English Literature",
-      grades: [87, 82, 90, 85, 88],
-      isPaid: false,
-      enrollmentDate: new Date("2021-01-15")
+
+      eventDate: "1944-06-06",
+
+      eventDescription: "Participated in the D-Day landings in Normandy.",
+
     },
-    {
-      id: 9,
-      fullName: "Eli Bernstein",
-      age: 20,
-      degree: "Chemistry",
-      grades: [89, 93, 86, 91, 88],
-      isPaid: true,
-      enrollmentDate: new Date("2022-09-01")
-    },
-    {
-      id: 10,
-      fullName: "Leah Weiss",
-      age: 22,
-      degree: "Economics",
-      grades: [84, 88, 92, 79, 86],
-      isPaid: false,
-      enrollmentDate: new Date("2020-09-01")
-    }
-  ];
+
+  ],
+
+  currentDeployment: {
+
+    location: "Middle East",
+
+    mission: "Counter-terrorism operations",
+
+    startDate: "2024-01-01",
+
+    estimatedEndDate: "2024-12-31",
+
+  },
+
+};
 
 
+function Mission1(militaryUnit) {
+  return  `Chief of staff name: ${militaryUnit.commandStructure.chiefOfStaff.name}
+   rank: ${militaryUnit.commandStructure.chiefOfStaff.rank}
+   phone:${militaryUnit.commandStructure.chiefOfStaff.contact.phone}`
+}
+//console.log(Mission1(militaryUnit));
 
-  function average(listNum){
-    let ave = 0;
-    let index = 0;
-    for (let item of listNum){
-        ave += item
-        index +=1
-    }
-    return ave/index
+function Mission2(militaryUnit){
+let count = 0;
+for (let index = 0; index < militaryUnit.personnel.length; index++) {   
+  count++
+}
+return count
+}
+//console.log(Mission2(militaryUnit));
+
+function Mission3(NewDeployment, militaryUnit)
+{
+  const deploymentToHistory = {
+      eventDate: militaryUnit.currentDeployment.startDate,
+      eventDescription: militaryUnit.currentDeployment.mission
   }
+  militaryUnit.history.push(deploymentToHistory);
 
-function GetAverge(){
-   for (let i = 0 ; i < students.length; i ++)
-    console.log(students[i].fullName,average(students[i].grades));
+  militaryUnit.currentDeployment.location = NewDeployment.location;
+  militaryUnit.currentDeployment.mission = NewDeployment.mission;
+  militaryUnit.currentDeployment.startDate = NewDeployment.startDate;
+  militaryUnit.currentDeployment.estimatedEndDate = NewDeployment.estimatedEndDate;
+  return militaryUnit;
 }
-//GetAverge()
-function isPaid(){
-    let pay = 0
-    for (let index = 0; index < students.length; index++) {
-        if (students[index].isPaid){
-            pay++
-        }
+const newDeployment = {     
+location: "Suoth",
+mission: "Kill-militery",
+startDate: "2025-08-01",
+estimatedEndDate: "2026-12-31",
+}
 
-    }
-    console.log(`${pay} students paeid; ${students.length - pay} not paied`);
+console.log(Mission3(newDeployment, militaryUnit));
+
+function Mission4(firearms1) {
+for (let index = 0; index < militaryUnit.equipment.firearms.length; index++) {
+if (militaryUnit.equipment.firearms[index].type  === firearms1.type 
+  && militaryUnit.equipment.firearms[index].status === firearms1.status)
+  {  
+    militaryUnit.equipment.firearms[index].quantity++ 
+    return militaryUnit
+  }
+} 
+let newfirearms = Object.create(militaryUnit.equipment.firearms[0]);
+newfirearms.type = firearms1.type
+newfirearms.status = firearms1.status
+newfirearms.quantity = firearms1.quantity
+console.log(newfirearms);
+militaryUnit.equipment.firearms[militaryUnit.equipment.firearms.length] = newfirearms  
+return militaryUnit
 }
-const bb = students.filter(a => a.isPaid == true)
-const cc = students.map(function(a) {return{...a ,fullName:"Mr" + a.fullName}})
-const dd = students.reduce(function(sum ,curr){ curr.isPaid ? sum.paid ++ : sum.notPaid++ ;return sum},{paid:0,notPaid:0} )
-//isPaid()
-console.log(dd);
+
+
+let a ={
+
+type: "M17 Rifle",
+
+quantity: 500,
+
+status: "Operational",
+
+}
+
+
+//console.log(Mission4(a));
+//console.log(militaryUnit);
+
+function Mission5(militaryUnit){
+ sum = 0
+ for (let index = 0; index < militaryUnit.trainingPrograms.length; index++) {
+    sum += militaryUnit.trainingPrograms[index].duration   
+ }  
+ return `${sum}`
+}
+//console.log(Mission5(militaryUnit));
+
 
